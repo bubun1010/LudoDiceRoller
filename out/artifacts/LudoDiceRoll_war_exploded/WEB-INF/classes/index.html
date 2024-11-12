@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo Dice Roll</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Ludo Dice Roll</h1>
+    <div class="dice-container">
+        <div id="dice" class="dice">🎲</div>
+        <button id="rollButton">Roll the Dice</button>
+    </div>
+    <p id="result" class="result"></p>
+</div>
+
+<script>
+    document.getElementById("rollButton").addEventListener("click", function() {
+        const result = Math.floor(Math.random() * 6) + 1;
+        document.getElementById("result").innerText = "You rolled a: " + result;
+    });
+</script>
+</body>
+</html>
